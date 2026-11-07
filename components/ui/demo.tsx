@@ -40,7 +40,13 @@ export default function Demo() {
           className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#232d43] via-[#232d43]/65 to-transparent"
         />
 
-        <div className="mx-auto flex h-full max-w-6xl flex-col justify-between px-6 pt-12 pb-10 sm:px-10">
+        {/* Sombra inferior suave para que el texto claro del pie destaque siempre sobre los juncos y el horizonte */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#14100f]/90 via-[#14100f]/45 to-transparent"
+        />
+
+        <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-between px-6 pt-12 pb-8 sm:px-10">
           {/* Encabezado sutil del footer con el logo oficial */}
           <div className="flex flex-col justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
             <div className="flex items-center gap-4">
@@ -61,17 +67,17 @@ export default function Demo() {
                 />
               </a>
               <span className="hidden h-4 w-px bg-white/15 sm:inline-block" />
-              <p className="text-xs text-white/70">
+              <p className="text-xs text-white/75">
                 Pasa el cursor sobre la bandada para interactuar con el cielo.
               </p>
             </div>
 
-            <nav className="flex flex-wrap gap-6 text-sm text-white/80">
+            <nav className="flex flex-wrap gap-6 text-sm text-white/85">
               <a href="#inicio" className="transition-colors hover:text-[#ffd2a0]">
                 Inicio
               </a>
-              <a href="#proyectos" className="transition-colors hover:text-[#ffd2a0]">
-                Proyectos
+              <a href="#clientes" className="transition-colors hover:text-[#ffd2a0]">
+                Clientes
               </a>
               <a href="#servicios" className="transition-colors hover:text-[#ffd2a0]">
                 Servicios
@@ -82,10 +88,14 @@ export default function Demo() {
             </nav>
           </div>
 
-          {/* Barra inferior del footer sobre los juncos */}
-          <div className="flex flex-col items-start justify-between gap-2 pb-4 text-xs text-[#14100f]/80 sm:flex-row sm:items-center">
-            <span>© 2026 Raze · Andres Alquinta Ayala. Todos los derechos reservados.</span>
-            <span className="font-medium">Antofagasta - Chile</span>
+          {/* Barra inferior del footer con letras claras de alto contraste */}
+          <div className="flex flex-col items-start justify-between gap-2 rounded-xl border border-white/15 bg-[#14100f]/60 px-5 py-3.5 text-xs text-white/95 shadow-lg backdrop-blur-md sm:flex-row sm:items-center">
+            <span className="font-medium tracking-wide drop-shadow-sm">
+              © 2026 Raze · Andres Alquinta Ayala. Todos los derechos reservados.
+            </span>
+            <span className="font-semibold tracking-wider text-[#ffd2a0] uppercase drop-shadow-sm">
+              Antofagasta - Chile
+            </span>
           </div>
         </div>
       </MurmurationWordmark>

@@ -40,13 +40,7 @@ export default function Demo() {
           className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#232d43] via-[#232d43]/65 to-transparent"
         />
 
-        {/* Sombra inferior suave para que el texto claro del pie destaque siempre sobre los juncos y el horizonte */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#14100f]/90 via-[#14100f]/45 to-transparent"
-        />
-
-        <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-between px-6 pt-12 pb-8 sm:px-10">
+        <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-between px-6 pt-12 pb-10 sm:px-10">
           {/* Encabezado sutil del footer con el logo oficial */}
           <div className="flex flex-col justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
             <div className="flex items-center gap-4">
@@ -88,14 +82,10 @@ export default function Demo() {
             </nav>
           </div>
 
-          {/* Barra inferior del footer con letras claras de alto contraste */}
-          <div className="flex flex-col items-start justify-between gap-2 rounded-xl border border-white/15 bg-[#14100f]/60 px-5 py-3.5 text-xs text-white/95 shadow-lg backdrop-blur-md sm:flex-row sm:items-center">
-            <span className="font-medium tracking-wide drop-shadow-sm">
-              © 2026 Raze · Andres Alquinta Ayala. Todos los derechos reservados.
-            </span>
-            <span className="font-semibold tracking-wider text-[#ffd2a0] uppercase drop-shadow-sm">
-              Antofagasta - Chile
-            </span>
+          {/* Barra inferior del footer sobre los juncos, sin tarjeta, solo texto claro con contraste */}
+          <div className="flex flex-col items-start justify-between gap-2 pb-4 text-xs text-white/95 drop-shadow-[0_1px_4px_rgba(20,16,15,0.85)] sm:flex-row sm:items-center">
+            <span>© 2026 Raze · Andres Alquinta Ayala. Todos los derechos reservados.</span>
+            <span className="font-medium text-[#fff3df]">Antofagasta - Chile</span>
           </div>
         </div>
       </MurmurationWordmark>

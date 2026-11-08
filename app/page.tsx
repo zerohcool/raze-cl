@@ -1,85 +1,6 @@
 import Image from "next/image"
 import Demo from "@/components/ui/demo"
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUpRight,
-  ExternalLink,
-  Layers,
-  ShieldCheck,
-  BarChart3,
-  Truck,
-  Factory,
-  FileBadge,
-  Sparkles,
-} from "lucide-react"
-
-const CLIENT_WEBAPPS = [
-  {
-    client: "Enaex",
-    name: "Dashboard Carguío",
-    description:
-      "Monitoreo operativo, control de indicadores y trazabilidad de carguío en tiempo real.",
-    url: "https://dashboard-carguio-enaex.vercel.app",
-    routeLabel: "raze.cl / Enaex / Dashboard-Carguío",
-    icon: BarChart3,
-  },
-  {
-    client: "Enaex",
-    name: "Dashboard KPI",
-    description:
-      "Visualización ejecutiva de métricas clave de desempeño y seguimiento operacional.",
-    url: "https://dashboard-kpi-enaex.vercel.app",
-    routeLabel: "raze.cl / Enaex / Dashboard-KPI",
-    icon: Layers,
-  },
-  {
-    client: "Operaciones",
-    name: "Planta ARL",
-    description:
-      "Sistema de gestión y control de procesos operativos de planta en producción.",
-    url: "https://planta-arl.vercel.app",
-    routeLabel: "raze.cl / Planta-ARL",
-    icon: Factory,
-  },
-  {
-    client: "Seguridad & Prevención",
-    name: "Control Entrega EPP",
-    description:
-      "Registro digital, trazabilidad e inventario de elementos de protección personal.",
-    url: "https://control-entrega-epp.vercel.app",
-    routeLabel: "raze.cl / Control-EPP",
-    icon: ShieldCheck,
-  },
-  {
-    client: "Acreditación",
-    name: "Licencia Manipulador",
-    description:
-      "Plataforma de gestión, control de vencimientos y seguimiento de licencias.",
-    url: "https://licencia-manipulador.vercel.app",
-    routeLabel: "raze.cl / Licencia-Manipulador",
-    icon: FileBadge,
-  },
-  {
-    client: "Logística & Transporte",
-    name: "Control de Ruta",
-    description:
-      "Seguimiento de flota, bitácora de recorridos y control logístico en terreno.",
-    url: "https://control-de-ruta-six.vercel.app",
-    routeLabel: "raze.cl / Control-de-Ruta",
-    icon: Truck,
-  },
-  {
-    client: "Servicios en Terreno",
-    name: "Baños Químicos",
-    description:
-      "Gestión de mantenciones, ubicación y estado operativo de unidades en faena.",
-    url: "https://banos-quimicos.vercel.app",
-    routeLabel: "raze.cl / Baños-Químicos",
-    icon: Sparkles,
-  },
-]
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react"
 
 export default function Home() {
   return (
@@ -108,9 +29,6 @@ export default function Home() {
           />
         </a>
         <nav className="hidden gap-8 text-sm text-white/75 sm:flex">
-          <a href="#clientes" className="transition-colors hover:text-[#ffd2a0]">
-            Clientes
-          </a>
           <a href="#servicios" className="transition-colors hover:text-[#ffd2a0]">
             Servicios
           </a>
@@ -120,7 +38,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Contenido principal (Hero + Clientes + Servicios + Contacto) con fondo rgb(35, 45, 67) */}
+      {/* Contenido principal (Hero + Servicios + Contacto) con fondo rgb(35, 45, 67) */}
       <main className="mx-auto max-w-6xl px-6 sm:px-10">
         {/* Hero */}
         <section className="grid min-h-[80svh] items-center gap-12 py-16 lg:grid-cols-12">
@@ -137,17 +55,17 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#clientes"
+                href="#contacto"
                 className="inline-flex items-center gap-2 rounded-full bg-[#e89a6a] px-6 py-3 text-sm font-medium text-[#14100f] transition-colors hover:bg-[#ffd2a0]"
               >
-                Acceso Clientes (WebApps)
+                Iniciar conversación
                 <ArrowUpRight className="h-4 w-4" />
               </a>
               <a
-                href="#contacto"
+                href="#servicios"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/85 transition-colors hover:border-white/30 hover:bg-white/[0.07]"
               >
-                Contacto directo
+                Explorar servicios
               </a>
             </div>
           </div>
@@ -168,79 +86,6 @@ export default function Home() {
                 className="relative h-auto w-56 drop-shadow-[0_12px_32px_rgba(241,70,52,0.22)] sm:w-68"
               />
             </div>
-          </div>
-        </section>
-
-        {/* Sección [Clientes] — Accesos directos a WebApps en producción */}
-        <section id="clientes" className="border-t border-white/10 py-24">
-          <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#e89a6a]/30 bg-[#e89a6a]/10 px-3.5 py-1 text-xs font-medium tracking-wider text-[#ffd2a0] uppercase">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#e89a6a]" />
-                Portal de Clientes
-              </div>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                WebApps en Producción
-              </h2>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-base">
-                Acceso directo a los sistemas, dashboards operativos y plataformas
-                desarrolladas y desplegadas para nuestros clientes.
-              </p>
-            </div>
-            <span className="text-xs font-medium tracking-widest text-white/45 uppercase">
-              {CLIENT_WEBAPPS.length} Sistemas Activos
-            </span>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {CLIENT_WEBAPPS.map((app) => {
-              const Icon = app.icon
-              return (
-                <a
-                  key={app.name}
-                  href={app.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[#e89a6a]/50 hover:bg-white/[0.06] hover:shadow-xl"
-                >
-                  <div>
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="inline-flex items-center gap-1.5 rounded-md bg-white/[0.06] px-2.5 py-1 text-[11px] font-medium tracking-wider text-[#ffd2a0] uppercase">
-                        {app.client}
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-400">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                        Online
-                      </span>
-                    </div>
-
-                    <div className="mt-5 flex items-start gap-3.5">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e89a6a]/15 text-[#e89a6a] ring-1 ring-[#e89a6a]/25 transition-colors group-hover:bg-[#e89a6a] group-hover:text-[#14100f]">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-[#ffd2a0]">
-                          {app.name}
-                        </h3>
-                        <p className="mt-1.5 text-sm leading-relaxed text-white/65">
-                          {app.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs">
-                    <span className="font-mono text-white/45 transition-colors group-hover:text-white/70">
-                      {app.routeLabel}
-                    </span>
-                    <span className="inline-flex items-center gap-1 font-medium text-[#e89a6a] group-hover:text-[#ffd2a0]">
-                      Abrir App
-                      <ExternalLink className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </span>
-                  </div>
-                </a>
-              )
-            })}
           </div>
         </section>
 
@@ -332,7 +177,7 @@ export default function Home() {
 
             {/* Columna derecha: Tarjetas de canales de contacto */}
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
-              {/* Teléfono / WhatsApp CORREGIDO: +56 9 6673 5408 */}
+              {/* Teléfono / WhatsApp: +56 9 6673 5408 */}
               <a
                 href="https://wa.me/56966735408"
                 target="_blank"

@@ -62,16 +62,13 @@ export default function Demo() {
               </a>
               <span className="hidden h-4 w-px bg-white/15 sm:inline-block" />
               <p className="text-xs text-white/75">
-                Pasa el cursor sobre la bandada para interactuar con el cielo.
+                Diseño y desarrollo digital.
               </p>
             </div>
 
             <nav className="flex flex-wrap gap-6 text-sm text-white/85">
               <a href="#inicio" className="transition-colors hover:text-[#ffd2a0]">
                 Inicio
-              </a>
-              <a href="#clientes" className="transition-colors hover:text-[#ffd2a0]">
-                Clientes
               </a>
               <a href="#servicios" className="transition-colors hover:text-[#ffd2a0]">
                 Servicios
